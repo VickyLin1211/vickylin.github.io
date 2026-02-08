@@ -1,96 +1,216 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Vicky Lin</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-body {
-    background-color: #f5ecd9;
-    font-family: Georgia, serif;
-    margin: 40px;
-    line-height: 1.6;
+
+:root{
+  --bg:#f5ecd9;
+  --text:#111;
+  --soft:#555;
+  --card:rgba(255,255,255,0.6);
 }
 
-h1 {
-    font-size: 42px;
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:Inter, sans-serif;
+  color:var(--text);
+  line-height:1.7;
 }
 
-h2 {
-    margin-top: 40px;
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
 }
 
-.section {
-    max-width: 800px;
+/* NAV */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 20px;
+  font-size:14px;
 }
 
-.linkedin-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 18px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  margin-left:18px;
 }
 
-.linkedin-btn:hover {
-    background-color: #555;
+nav a:hover{
+  opacity:0.6;
 }
+
+/* HERO */
+
+h1{
+  font-family:"Playfair Display", serif;
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  color:var(--soft);
+}
+
+/* SECTION */
+
+section{
+  margin-top:70px;
+}
+
+h2{
+  font-family:"Playfair Display", serif;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+/* CARDS */
+
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:18px;
+  margin-bottom:18px;
+}
+
+/* BUTTON */
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 18px;
+  background:#222;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.btn:hover{
+  background:#444;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  h1{
+    font-size:40px;
+  }
+
+  h2{
+    font-size:28px;
+  }
+
+}
+
 </style>
-
 </head>
 
 <body>
 
-<div class="section">
+<nav>
+  <div><b>Vicky Lin</b></div>
+
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#connect">Connect</a>
+  </div>
+</nav>
+
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
 
 <h1>Welcome to My Music World</h1>
 
 <p>
-Hi, I’m Vicky Lin, a pianist from Taiwan with a deep love for storytelling through music. 
-I believe music is more than just sound; it’s a way to express, to connect, and to heal. 
-With over 17 years of piano experience and a journey that spans classical, jazz, and improvisation, 
+Hi, I’m Vicky Lin, a pianist from Taiwan with a deep love for storytelling through music.
+I believe music is more than just sound; it’s a way to express, to connect, and to heal.
+With over 17 years of piano experience and a journey that spans classical, jazz, and improvisation,
 I create with both emotion and intention.
 </p>
 
 <p>
-My artistic path has led me through performance, music therapy, and now the music business, 
+My artistic path has led me through performance, music therapy, and now the music business,
 where I hope to build tools and spaces that make music education and emotional wellness more accessible to all.
 </p>
+
+</div>
+
+
+<!-- ABOUT -->
+<section id="about">
 
 <h2>About Me</h2>
 
 <p>
-Vicky Lin is a classically trained pianist and saxophonist from Taiwan, currently majoring in Music Business at Berklee College of Music. She began studying piano at the age of five and has over 17 years of musical experience. As a child, she completed multiple piano proficiency exams and earned ABRSM music theory certifications. She also performed frequently as a saxophonist, playing alto, tenor, and baritone saxophones in school bands.
+Vicky Lin is a classically trained pianist and saxophonist from Taiwan, currently majoring in Music Business at Berklee College of Music. She began studying piano at the age of five and has over 17 years of musical experience.
 </p>
 
 <p>
-In high school, Vicky won first place in a piano competition with her performance of Beethoven’s Piano Sonata No. 17 in D minor, Op. 31, No. 2 (“The Tempest”). She was later accepted to Berklee with a scholarship, after initially studying music performance at Fu Jen Catholic University in Taiwan.
+As a child, she completed multiple piano proficiency exams and earned ABRSM music theory certifications. She also performed frequently as a saxophonist, playing alto, tenor, and baritone saxophones in school bands.
 </p>
 
 <p>
-At Berklee, Vicky has explored a wide range of musical styles including classical, jazz, pop, and improvisation. After three semesters as a performance major, her growing interest in psychology led her to switch first to music therapy, and later to music business. Drawing from her deep musical background and emotional sensitivity, she is now developing PAC, a music education platform that integrates learning, emotional wellness, and creative exploration.
+In high school, Vicky won first place in a piano competition with her performance of Beethoven’s Piano Sonata No. 17 in D minor, Op. 31, No. 2 ("The Tempest"). She was later accepted to Berklee with a scholarship, after initially studying music performance at Fu Jen Catholic University in Taiwan.
 </p>
+
+<p>
+At Berklee, Vicky has explored classical, jazz, pop, and improvisation. After three semesters as a performance major, her interest in psychology led her to switch to music therapy and later to music business. She is currently developing PAC, a music education platform integrating learning, emotional wellness, and creativity.
+</p>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
 
 <h2>Projects</h2>
 
-<ul>
-<li><b>PAC Music</b> – A music education platform that integrates music learning, emotional wellness, and creative exploration.</li>
+<div class="card">
+<b>PAC Music</b>
+<p>
+A music education platform that integrates music learning, emotional wellness, and creative exploration.
+</p>
+</div>
 
-<li><b>Starbucks Soundwave Concept</b> – A marketing concept combining music discovery with coffee experiences through digital playlists and QR interaction.</li>
+<div class="card">
+<b>Starbucks Soundwave Concept</b>
+<p>
+A marketing concept combining music discovery with coffee experiences through digital playlists and QR interaction.
+</p>
+</div>
 
-</ul>
+</section>
+
+
+<!-- CONNECT -->
+<section id="connect">
 
 <h2>Connect With Me</h2>
 
-<a class="linkedin-btn" href="https://www.linkedin.com/in/vicky-lin-65278b382" target="_blank">
+<a class="btn" href="https://www.linkedin.com/in/vicky-lin-65278b382" target="_blank">
 Visit My LinkedIn
 </a>
+
+</section>
 
 </div>
 
 </body>
 </html>
-</html>
-
-<!-- update -->
