@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
   --bg:#f5ecd9;
   --text:#111;
@@ -31,7 +30,6 @@ body{
 }
 
 /* NAV */
-
 nav{
   display:flex;
   justify-content:space-between;
@@ -51,7 +49,6 @@ nav a:hover{
 }
 
 /* HERO */
-
 h1{
   font-family:"Playfair Display", serif;
   font-size:55px;
@@ -64,7 +61,6 @@ h1{
 }
 
 /* SECTION */
-
 section{
   margin-top:70px;
 }
@@ -76,7 +72,6 @@ h2{
 }
 
 /* CARDS */
-
 .card{
   background:var(--card);
   padding:22px;
@@ -84,23 +79,7 @@ h2{
   margin-bottom:18px;
 }
 
-/* DETAILS INTERACTION */
-
-details summary { 
-  list-style:none;
-  cursor:pointer;
-}
-
-details summary::-webkit-details-marker { 
-  display:none; 
-}
-
-details[open] summary{
-  opacity:0.85;
-}
-
 /* BUTTON */
-
 .btn{
   display:inline-block;
   margin-top:20px;
@@ -116,20 +95,22 @@ details[open] summary{
   background:#444;
 }
 
-/* MOBILE */
-
-@media(max-width:700px){
-
-  h1{
-    font-size:40px;
-  }
-
-  h2{
-    font-size:28px;
-  }
-
+/* Interactive toggle */
+.clickable-heading{
+  cursor:pointer;
+  user-select:none;
+  display:inline-block;
 }
 
+.clickable-heading:hover{
+  opacity:0.75;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  h1{ font-size:40px; }
+  h2{ font-size:28px; }
+}
 </style>
 </head>
 
@@ -137,112 +118,114 @@ details[open] summary{
 
 <nav>
   <div><b>Vicky Lin</b></div>
-
   <div>
     <a href="#about">About</a>
+    <a href="#care">Care</a>
     <a href="#projects">Projects</a>
     <a href="#connect">Connect</a>
   </div>
 </nav>
 
-
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
+  <h1>Welcome to My Music World</h1>
 
-<h1>Welcome to My Music World</h1>
+  <p>
+    Hi, I’m Vicky Lin, a pianist from Taiwan with a deep love for storytelling through music.
+    I believe music is more than just sound; it’s a way to express, to connect, and to heal.
+    With over 17 years of piano experience and a journey that spans classical, jazz, and improvisation,
+    I create with both emotion and intention.
+  </p>
 
-<p>
-Hi, I’m Vicky Lin, a pianist from Taiwan with a deep love for storytelling through music.
-I believe music is more than just sound; it’s a way to express, to connect, and to heal.
-With over 17 years of piano experience and a journey that spans classical, jazz, and improvisation,
-I create with both emotion and intention.
-</p>
-
-<p>
-My artistic path has led me through performance, music therapy, and now the music business,
-where I hope to build tools and spaces that make music education and emotional wellness more accessible to all.
-</p>
-
+  <p>
+    My artistic path has led me through performance, music therapy, and now the music business,
+    where I hope to build tools and spaces that make music education and emotional wellness more accessible to all.
+  </p>
 </div>
-
 
 <!-- ABOUT -->
 <section id="about">
+  <h2>About Me</h2>
 
-<h2>About Me</h2>
+  <p>
+    Vicky Lin is a classically trained pianist and saxophonist from Taiwan, currently majoring in Music Business at Berklee College of Music. She began studying piano at the age of five and has over 17 years of musical experience.
+  </p>
 
-<p>
-Vicky Lin is a classically trained pianist and saxophonist from Taiwan, currently majoring in Music Business at Berklee College of Music.
-</p>
+  <p>
+    As a child, she completed multiple piano proficiency exams and earned ABRSM music theory certifications. She also performed frequently as a saxophonist, playing alto, tenor, and baritone saxophones in school bands.
+  </p>
 
-<p>
-She began studying piano at the age of five and has over 17 years of musical experience.
-</p>
+  <p>
+    In high school, Vicky won first place in a piano competition with her performance of Beethoven’s Piano Sonata No. 17 in D minor, Op. 31, No. 2 ("The Tempest"). She was later accepted to Berklee with a scholarship, after initially studying music performance at Fu Jen Catholic University in Taiwan.
+  </p>
 
-<p>
-At Berklee, Vicky has explored classical, jazz, pop, and improvisation. She is currently developing PAC, a music education platform integrating learning, emotional wellness, and creativity.
-</p>
-
+  <p>
+    At Berklee, Vicky has explored classical, jazz, pop, and improvisation. After three semesters as a performance major, her interest in psychology led her to switch to music therapy and later to music business. She is currently developing PAC, a music education platform integrating learning, emotional wellness, and creativity.
+  </p>
 </section>
 
+<!-- INTERACTIVE MOMENT (Assignment #6) -->
+<section id="care">
+  <h2 class="clickable-heading" id="careHeading" aria-expanded="false">
+    What I Care About Right Now
+  </h2>
+
+  <div class="card" id="careText" style="display:none; margin-top:14px;">
+    <p style="margin:0; color:var(--soft);">
+      Right now, I’m thinking about how music education can feel more personal and less intimidating.
+      I’m curious about how technology can support creative growth instead of replacing human connection.
+      I care about helping artists and students feel more confident and more in control of their own paths.
+      I’m also exploring how sustainable creative careers can be built in a changing industry.
+    </p>
+  </div>
+</section>
 
 <!-- PROJECTS -->
 <section id="projects">
+  <h2>Projects</h2>
 
-<h2>Projects</h2>
+  <div class="card">
+    <b>PAC Music</b>
+    <p>
+      A music education platform that integrates music learning, emotional wellness, and creative exploration.
+    </p>
+  </div>
 
-<div class="card">
-<b>PAC Music</b>
-<p>
-A music education platform that integrates music learning, emotional wellness, and creative exploration.
-</p>
-</div>
-
-<div class="card">
-<b>Starbucks Soundwave Concept</b>
-<p>
-A marketing concept combining music discovery with coffee experiences through digital playlists and QR interaction.
-</p>
-</div>
-
+  <div class="card">
+    <b>Starbucks Soundwave Concept</b>
+    <p>
+      A marketing concept combining music discovery with coffee experiences through digital playlists and QR interaction.
+    </p>
+  </div>
 </section>
-
-
-<!-- INTERACTIVE SECTION -->
-<section id="care">
-
-<details class="card">
-
-<summary style="font-family:'Playfair Display', serif; font-size:36px; font-weight:700;">
-What I Care About Right Now
-</summary>
-
-<p style="margin-top:12px; color:var(--soft);">
-Right now, I’m thinking about how music education can feel more personal and less intimidating.
-I’m curious about how technology can support creative growth instead of replacing human connection.
-I care about helping artists and students feel more confident and more in control of their own paths.
-I’m also exploring how sustainable creative careers can be built in a changing industry.
-</p>
-
-</details>
-
-</section>
-
 
 <!-- CONNECT -->
 <section id="connect">
+  <h2>Connect With Me</h2>
 
-<h2>Connect With Me</h2>
-
-<a class="btn" href="https://www.linkedin.com/in/vicky-lin-65278b382" target="_blank">
-Visit My LinkedIn
-</a>
-
+  <a class="btn" href="https://www.linkedin.com/in/vicky-lin-65278b382" target="_blank">
+    Visit My LinkedIn
+  </a>
 </section>
 
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const heading = document.getElementById("careHeading");
+    const text = document.getElementById("careText");
+
+    if (!heading || !text) return;
+
+    heading.addEventListener("click", function () {
+      const isHidden = text.style.display === "none";
+      text.style.display = isHidden ? "block" : "none";
+      heading.setAttribute("aria-expanded", String(isHidden));
+    });
+  });
+</script>
 
 </body>
 </html>
