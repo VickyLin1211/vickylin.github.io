@@ -15,6 +15,32 @@
   --soft:#555;
   --card:rgba(255,255,255,0.6);
 }
+<section>
+  <h2 id="toggleTitle" style="cursor: pointer; user-select: none;">
+    What I Care About Right Now
+  </h2>
+
+  <p id="toggleContent" style="display: none; margin-top: 10px; line-height: 1.6;">
+    Right now, I’m thinking about how music education can feel more personal and less intimidating.
+    I’m curious about how technology can support creative growth instead of replacing human connection.
+    I care about helping artists and students feel more confident and more in control of their own paths.
+    I’m also exploring how sustainable creative careers can be built in a changing industry.
+  </p>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const title = document.getElementById("toggleTitle");
+    const content = document.getElementById("toggleContent");
+
+    if (!title || !content) return;
+
+    title.addEventListener("click", function () {
+      const isHidden = content.style.display === "none";
+      content.style.display = isHidden ? "block" : "none";
+    });
+  });
+</script>
 
 body{
   margin:0;
@@ -212,33 +238,3 @@ Visit My LinkedIn
 
 </div>
 
-</body>
-</html>
-
-<section>
-  <h2 id="toggleTitle" style="cursor: pointer;">
-    What I Care About Right Now
-  </h2>
-
-  <div id="toggleContent" style="display: none; margin-top: 10px;">
-    <p>
-      Right now, I’m thinking about how music education can feel more personal and less intimidating.
-      I’m curious about how technology can support creative growth instead of replacing human connection.
-      I care about helping artists and students feel more confident and more in control of their own paths.
-      I’m also exploring how sustainable creative careers can be built in a changing industry.
-    </p>
-  </div>
-</section>
-
-<script>
-  const title = document.getElementById("toggleTitle");
-  const content = document.getElementById("toggleContent");
-
-  title.addEventListener("click", function() {
-    if (content.style.display === "none") {
-      content.style.display = "block";
-    } else {
-      content.style.display = "none";
-    }
-  });
-</script>
