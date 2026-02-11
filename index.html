@@ -15,32 +15,6 @@
   --soft:#555;
   --card:rgba(255,255,255,0.6);
 }
-<section>
-  <h2 id="toggleTitle" style="cursor: pointer; user-select: none;">
-    What I Care About Right Now
-  </h2>
-
-  <p id="toggleContent" style="display: none; margin-top: 10px; line-height: 1.6;">
-    Right now, I’m thinking about how music education can feel more personal and less intimidating.
-    I’m curious about how technology can support creative growth instead of replacing human connection.
-    I care about helping artists and students feel more confident and more in control of their own paths.
-    I’m also exploring how sustainable creative careers can be built in a changing industry.
-  </p>
-</section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const title = document.getElementById("toggleTitle");
-    const content = document.getElementById("toggleContent");
-
-    if (!title || !content) return;
-
-    title.addEventListener("click", function () {
-      const isHidden = content.style.display === "none";
-      content.style.display = isHidden ? "block" : "none";
-    });
-  });
-</script>
 
 body{
   margin:0;
@@ -108,6 +82,21 @@ h2{
   padding:22px;
   border-radius:18px;
   margin-bottom:18px;
+}
+
+/* DETAILS INTERACTION */
+
+details summary { 
+  list-style:none;
+  cursor:pointer;
+}
+
+details summary::-webkit-details-marker { 
+  display:none; 
+}
+
+details[open] summary{
+  opacity:0.85;
 }
 
 /* BUTTON */
@@ -185,19 +174,15 @@ where I hope to build tools and spaces that make music education and emotional w
 <h2>About Me</h2>
 
 <p>
-Vicky Lin is a classically trained pianist and saxophonist from Taiwan, currently majoring in Music Business at Berklee College of Music. She began studying piano at the age of five and has over 17 years of musical experience.
+Vicky Lin is a classically trained pianist and saxophonist from Taiwan, currently majoring in Music Business at Berklee College of Music.
 </p>
 
 <p>
-As a child, she completed multiple piano proficiency exams and earned ABRSM music theory certifications. She also performed frequently as a saxophonist, playing alto, tenor, and baritone saxophones in school bands.
+She began studying piano at the age of five and has over 17 years of musical experience.
 </p>
 
 <p>
-In high school, Vicky won first place in a piano competition with her performance of Beethoven’s Piano Sonata No. 17 in D minor, Op. 31, No. 2 ("The Tempest"). She was later accepted to Berklee with a scholarship, after initially studying music performance at Fu Jen Catholic University in Taiwan.
-</p>
-
-<p>
-At Berklee, Vicky has explored classical, jazz, pop, and improvisation. After three semesters as a performance major, her interest in psychology led her to switch to music therapy and later to music business. She is currently developing PAC, a music education platform integrating learning, emotional wellness, and creativity.
+At Berklee, Vicky has explored classical, jazz, pop, and improvisation. She is currently developing PAC, a music education platform integrating learning, emotional wellness, and creativity.
 </p>
 
 </section>
@@ -225,6 +210,27 @@ A marketing concept combining music discovery with coffee experiences through di
 </section>
 
 
+<!-- INTERACTIVE SECTION -->
+<section id="care">
+
+<details class="card">
+
+<summary style="font-family:'Playfair Display', serif; font-size:36px; font-weight:700;">
+What I Care About Right Now
+</summary>
+
+<p style="margin-top:12px; color:var(--soft);">
+Right now, I’m thinking about how music education can feel more personal and less intimidating.
+I’m curious about how technology can support creative growth instead of replacing human connection.
+I care about helping artists and students feel more confident and more in control of their own paths.
+I’m also exploring how sustainable creative careers can be built in a changing industry.
+</p>
+
+</details>
+
+</section>
+
+
 <!-- CONNECT -->
 <section id="connect">
 
@@ -238,3 +244,5 @@ Visit My LinkedIn
 
 </div>
 
+</body>
+</html>
